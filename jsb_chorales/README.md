@@ -1,52 +1,46 @@
-# Johann Sebastian Bach Chorales Dataset
+<p align="center">
+  <img src="https://raw.githubusercontent.com/hereandnowai/images/refs/heads/main/logos/logo-of-here-and-now-ai.png" alt="HERE AND NOW AI Logo" width="250">
+</p>
 
-## Source
-This dataset contains 382 chorales by Johann Sebastian Bach (in the public domain), where each chorale is composed of 100 to 640 chords with a temporal resolution of 1/16th. Each chord is composed of 4 integers, each indicating the index of a note on a piano, except for the value 0 which means "no note played".
+# JSB Chorales Performance Dataset
 
-This dataset is based on [czhuang's JSB-Chorales-dataset](https://github.com/czhuang/JSB-Chorales-dataset/blob/master/README.md) (`Jsb16thSeparated.npz`) which used the train, validation, test split from Boulanger-Lewandowski (2012).
+### *AI is Good*
 
-Motivation: I thought it would be nice to have a version of this dataset in CSV format.
+A collection of 382 chorales by Johann Sebastian Bach, formatted for machine learning tasks like polyphonic music generation and sequence modeling.
 
-## Reference
-Boulanger-Lewandowski, N., Vincent, P., & Bengio, Y. (2012). Modeling Temporal Dependencies in High-Dimensional Sequences: Application to Polyphonic Music Generation and Transcription. Proceedings of the 29th International Conference on Machine Learning (ICML-12), 1159–1166.
+## 🎼 Dataset Insights
 
-## Usage
-Download `jsb_chorales.tgz` and untar it:
+- **Content**: 382 chorales in CSV format.
+- **Source**: Based on [czhuang's JSB-Chorales-dataset](https://github.com/czhuang/JSB-Chorales-dataset).
+- **Core Reference**: Boulanger-Lewandowski et al., "Modeling Temporal Dependencies in High-Dimensional Sequences," *ICML*, 2012.
 
+## 📦 Getting Started
+
+To extract the dataset files:
 ```bash
 $ tar xvzf jsb_chorales.tgz
 ```
 
-## Data structure
-The dataset is split in three (train, valid, test), with a total of 382 CSV files:
+## 📂 Data Structure
 
-```
-$ tree
-.
-├── train
-│   ├── chorale_000.csv
-│   ├── chorale_001.csv
-│   ├── chorale_002.csv
-│   │   ...
-│   ├── chorale_227.csv
-│   └── chorale_228.csv
-├── valid
-│   ├── chorale_229.csv
-│   ├── chorale_230.csv
-│   ├── chorale_231.csv
-│   │   ...
-│   ├── chorale_303.csv
-│   └── chorale_304.csv
-└── test
-    ├── chorale_305.csv
-    ├── chorale_306.csv
-    ├── chorale_307.csv
-    │   ...
-    ├── chorale_380.csv
-    └── chorale_381.csv
-```
+The dataset is organized into `train`, `valid`, and `test` splits:
+- **Total Files**: 382 CSV files.
+- **Format**: Each chord represented by note indices on a piano scale.
 
-## Data sample
+---
+
+## 🤝 Connect with Us
+
+- **Website**: [hereandnowai.com](https://hereandnowai.com)
+- **LinkedIn**: [HERE AND NOW AI](https://www.linkedin.com/company/hereandnowai/)
+- **X (Twitter)**: [@hereandnow_ai](https://x.com/hereandnow_ai)
+- **Instagram**: [@hereandnow_ai](https://instagram.com/hereandnow_ai)
+- **YouTube**: [HERE AND NOW AI](https://youtube.com/@hereandnow_ai)
+- **GitHub**: [hereandnowai](https://github.com/hereandnowai)
+
+📧 **Email**: [info@hereandnowai.com](mailto:info@hereandnowai.com)
+📞 **Phone**: +91 996 296 1000
+
 
 ```
 $ head train/chorale_000.csv

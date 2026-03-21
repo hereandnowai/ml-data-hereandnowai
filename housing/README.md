@@ -1,53 +1,58 @@
-# California Housing
+<p align="center">
+  <img src="https://raw.githubusercontent.com/hereandnowai/images/refs/heads/main/logos/logo-of-here-and-now-ai.png" alt="HERE AND NOW AI Logo" width="250">
+</p>
 
-## Source
-This dataset is a modified version of the California Housing dataset available from [Luís Torgo's page](http://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html) (University of Porto). Luís Torgo obtained it from the StatLib repository (which is closed now). The dataset may also be downloaded from StatLib mirrors.
+# California Housing Prediction Dataset
 
-This dataset appeared in a 1997 paper titled *Sparse Spatial Autoregressions* by Pace, R. Kelley and Ronald Barry, published in the *Statistics and Probability Letters* journal. They built it using the 1990 California census data. It contains one row per census block group. A block group is the smallest geographical unit for which the U.S. Census Bureau publishes sample data (a block group typically has a population of 600 to 3,000 people).
+### *AI is Good*
 
-## Tweaks
-The dataset in this directory is almost identical to the original, with two differences:
+This dataset provides detailed information for predicting housing prices in California. It is based on the 1990 California census and is a classic dataset for regression tasks in machine learning.
 
-* 207 values were randomly removed from the `total_bedrooms` column, so we can discuss what to do with missing data.
-* An additional categorical attribute called `ocean_proximity` was added, indicating (very roughly) whether each block group is near the ocean, near the Bay area, inland or on an island. This allows discussing what to do with categorical data.
+## 📊 Dataset Overview
 
-Note that the block groups are called "districts" in the Jupyter notebooks, simply because in some contexts the name "block group" was confusing.
+- **Source**: Modified from [Luís Torgo's page](http://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html) (University of Porto).
+- **Core Reference**: Pace, R. Kelley and Ronald Barry, "Sparse Spatial Autoregressions," *Statistics and Probability Letters*, 1997.
+- **Unit**: Census Block Groups (approx. 600–3,000 residents).
 
-## Data description
+## 🛠 Features & Tweaks
 
-    >>> housing.info()
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 20640 entries, 0 to 20639
-    Data columns (total 10 columns):
-    longitude             20640 non-null float64
-    latitude              20640 non-null float64
-    housing_median_age    20640 non-null float64
-    total_rooms           20640 non-null float64
-    total_bedrooms        20433 non-null float64
-    population            20640 non-null float64
-    households            20640 non-null float64
-    median_income         20640 non-null float64
-    median_house_value    20640 non-null float64
-    ocean_proximity       20640 non-null object
-    dtypes: float64(9), object(1)
-    memory usage: 1.6+ MB
-    
-    >>> housing["ocean_proximity"].value_counts()
-    <1H OCEAN     9136
-    INLAND        6551
-    NEAR OCEAN    2658
-    NEAR BAY      2290
-    ISLAND           5
-    Name: ocean_proximity, dtype: int64
-    
-    >>> housing.describe()
-              longitude      latitude  housing_median_age   total_rooms  \
-    count  16513.000000  16513.000000        16513.000000  16513.000000   
-    mean    -119.575972     35.639693           28.652335   2622.347605   
-    std        2.002048      2.138279           12.576306   2138.559393   
-    min     -124.350000     32.540000            1.000000      6.000000   
-    25%     -121.800000     33.940000           18.000000   1442.000000   
-    50%     -118.510000     34.260000           29.000000   2119.000000   
+- **Target Column**: `median_house_value`.
+- **Key Modification**: 207 `total_bedrooms` values were removed to simulate missing data handling.
+- **Added Feature**: `ocean_proximity` (categorical) for grouping by geographical proximity to water.
+
+## 📈 Data Quick Look
+
+```python
+# housing.info() output
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 20640 entries, 0 to 20639
+Data columns (total 10 columns):
+longitude             20640 non-null float64
+latitude              20640 non-null float64
+housing_median_age    20640 non-null float64
+total_rooms           20640 non-null float64
+total_bedrooms        20433 non-null float64
+population            20640 non-null float64
+households            20640 non-null float64
+median_income         20640 non-null float64
+median_house_value    20640 non-null float64
+ocean_proximity       20640 non-null object
+```
+
+---
+
+## 🤝 Connect with Us
+
+- **Website**: [hereandnowai.com](https://hereandnowai.com)
+- **LinkedIn**: [HERE AND NOW AI](https://www.linkedin.com/company/hereandnowai/)
+- **X (Twitter)**: [@hereandnow_ai](https://x.com/hereandnow_ai)
+- **Instagram**: [@hereandnow_ai](https://instagram.com/hereandnow_ai)
+- **YouTube**: [HERE AND NOW AI](https://youtube.com/@hereandnow_ai)
+- **GitHub**: [hereandnowai](https://github.com/hereandnowai)
+
+📧 **Email**: [info@hereandnowai.com](mailto:info@hereandnowai.com)
+📞 **Phone**: +91 996 296 1000
+   
     75%     -118.010000     37.720000           37.000000   3141.000000   
     max     -114.310000     41.950000           52.000000  39320.000000   
 
